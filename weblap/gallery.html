@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galéria - Aranyliget Hotel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+
+<nav>
+  <h2>Aranyliget</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="rooms.html">Szobák</a></li>
+    <li><a href="gallery.html">Galéria</a></li>
+    <li><a href="contact.html">Kapcsolat</a></li>
+  </ul>
+  <div class="toggle" onclick="toggleMode()">🌙</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<section id="gallery">
+  <h2 class="title">Galéria</h2>
+  <div class="gallery">
+    <a href="images/image1.jpg" data-lightbox="gallery"><img src="images/thumb_image1.jpg" alt="Galéria 1"></a>
+    <a href="images/image2.jpg" data-lightbox="gallery"><img src="images/thumb_image2.jpg" alt="Galéria 2"></a>
+    <!-- Add more images as needed -->
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Aranyliget Hotel · Prémium Élmény</p>
+  <div class="socials">
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
