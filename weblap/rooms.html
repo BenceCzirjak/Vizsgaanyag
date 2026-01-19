@@ -3,35 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Szobák - Aranyliget Hotel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Szobák és extrák - Aranyliget Hotel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
-  <h2>Aranyliget</h2>
+  <div class="brand">
+    <img class="nav-logo" src="image.png" alt="Aranyliget Hotel">
+    <span class="brand-name">Aranyliget Hotel</span>
+  </div>
   <ul>
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Kezdőlap</a></li>
     <li><a href="rooms.html">Szobák</a></li>
     <li><a href="gallery.html">Galéria</a></li>
-    <li><a href="contact.html">Kapcsolat</a></li>
+    <li><a href="contact.html">Foglalás</a></li>
   </ul>
   <div class="toggle" onclick="toggleMode()">🌙</div>
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="hamburger" onclick="toggleMenu()">Menü</div>
 </nav>
 
-<section id="rooms">
-  <h2 class="title">Szobáink</h2>
-  <div class="rooms">
-    <div class="room"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Deluxe Szoba"><div><h3>Deluxe Szoba</h3></div></div>
-    <div class="room"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035" alt="Prémium Lakosztály"><div><h3>Prémium Lakosztály</h3></div></div>
-    <div class="room"><img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39" alt="Panorámás Szoba"><div><h3>Panorámás Szoba</h3></div></div>
+<section class="hero-shop">
+  <div class="hero-content">
+    <p class="eyebrow">Aranyliget Hotel</p>
+    <h1>Szobák és szolgáltatások egy helyen.</h1>
+    <p>Válassz szobát, adj hozzá extrákat, és állítsd össze a tartózkodást a saját igényeidhez.</p>
+    <div class="hero-actions">
+      <a class="btn" href="contact.html">Foglalás indítása</a>
+      <a class="btn btn-ghost" href="#catalog">Kínálat böngészése</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <strong>4.9</strong>
+        <span>Vendégértékelés</span>
+      </div>
+      <div>
+        <strong>24/7</strong>
+        <span>Recepció</span>
+      </div>
+      <div>
+        <strong>4</strong>
+        <span>Szobatípus</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <p class="tag">Kiemelt ajánlat</p>
+    <h3>Hétvégi pihenés</h3>
+    <p>Deluxe szoba + reggeli + késői kijelentkezés.</p>
+    <div class="price-row">
+      <span class="price">69 000 Ft-tól</span>
+      <a class="link" href="contact.html">Foglalás</a>
+    </div>
+  </div>
+</section>
+
+<section id="catalog">
+  <h2 class="title">Szobák és extrák</h2>
+  <div class="filters">
+    <button class="chip active" data-filter="all">Összes</button>
+    <button class="chip" data-filter="room">Szobák</button>
+    <button class="chip" data-filter="suite">Lakosztályok</button>
+    <button class="chip" data-filter="addon">Extrák</button>
+  </div>
+  <div class="rooms product-grid" id="shopGrid">
+    <article class="room product-card" data-category="room">
+      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Deluxe szoba">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Szoba</span>
+          <span class="price">49 000 Ft / éj</span>
+        </div>
+        <h3>Deluxe szoba</h3>
+        <p>Városi kilátás, prémium ágynemű. Férőhely: 2 fő.</p>
+        <div class="product-actions">
+          <button class="btn small add-to-booking" data-booking-add="room" data-name="Deluxe szoba" data-price="49000" data-capacity="2">Hozzáadás a foglaláshoz</button>
+          <a class="link" href="contact.html">Foglalás</a>
+        </div>
+      </div>
+    </article>
+    <article class="room product-card" data-category="suite">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035" alt="Prémium lakosztály">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Lakosztály</span>
+          <span class="price">79 000 Ft / éj</span>
+        </div>
+        <h3>Prémium lakosztály</h3>
+        <p>Tágas tér, nappali rész és balkon. Férőhely: 4 fő.</p>
+        <div class="product-actions">
+          <button class="btn small add-to-booking" data-booking-add="room" data-name="Prémium lakosztály" data-price="79000" data-capacity="4">Hozzáadás a foglaláshoz</button>
+          <a class="link" href="contact.html">Foglalás</a>
+        </div>
+      </div>
+    </article>
+    <article class="room product-card" data-category="room">
+      <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39" alt="Panorámás szoba">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Szoba</span>
+          <span class="price">65 000 Ft / éj</span>
+        </div>
+        <h3>Panorámás szoba</h3>
+        <p>Nagy ablakok és világos enteriőr. Férőhely: 3 fő.</p>
+        <div class="product-actions">
+          <button class="btn small add-to-booking" data-booking-add="room" data-name="Panorámás szoba" data-price="65000" data-capacity="3">Hozzáadás a foglaláshoz</button>
+          <a class="link" href="contact.html">Foglalás</a>
+        </div>
+      </div>
+    </article>
+    <article class="room product-card" data-category="room">
+      <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353" alt="Kertre néző szoba">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Szoba</span>
+          <span class="price">45 000 Ft / éj</span>
+        </div>
+        <h3>Kertre néző szoba</h3>
+        <p>Csendes elhelyezkedés, kertre néző ablakok. Férőhely: 2 fő.</p>
+        <div class="product-actions">
+          <button class="btn small add-to-booking" data-booking-add="room" data-name="Kertre néző szoba" data-price="45000" data-capacity="2">Hozzáadás a foglaláshoz</button>
+          <a class="link" href="contact.html">Foglalás</a>
+        </div>
+      </div>
+    </article>
+    <article class="room product-card" data-category="addon">
+      <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210c2" alt="Reggeli az ágyban">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Extra</span>
+          <span class="price">6 500 Ft</span>
+        </div>
+        <h3>Reggeli az ágyban</h3>
+        <p>Friss péksütemények és eszpresszó minden reggel.</p>
+        <div class="product-actions">
+          <button class="btn small add-to-booking" data-booking-add="extra" data-name="Reggeli az ágyban" data-price="6500">Hozzáadás a foglaláshoz</button>
+          <a class="link" href="contact.html">Foglalás</a>
+        </div>
+      </div>
+    </article>
+    <article class="room product-card" data-category="addon">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Séf kóstoló">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Extra</span>
+          <span class="price">24 000 Ft</span>
+        </div>
+        <h3>Séf kóstoló</h3>
+        <p>Ötfogásos szezonális menü borpárosítással.</p>
+        <div class="product-actions">
+          <button class="btn small add-to-booking" data-booking-add="extra" data-name="Séf kóstoló" data-price="24000">Hozzáadás a foglaláshoz</button>
+          <a class="link" href="contact.html">Foglalás</a>
+        </div>
+      </div>
+    </article>
+    <article class="room product-card" data-category="addon">
+      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773" alt="Spa belépő">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Extra</span>
+          <span class="price">9 500 Ft</span>
+        </div>
+        <h3>Spa belépő</h3>
+        <p>Egész napos hozzáférés szaunához és medencéhez.</p>
+        <div class="product-actions">
+          <button class="btn small add-to-booking" data-booking-add="extra" data-name="Spa belépő" data-price="9500">Hozzáadás a foglaláshoz</button>
+          <a class="link" href="contact.html">Foglalás</a>
+        </div>
+      </div>
+    </article>
+    <article class="room product-card" data-category="addon">
+      <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f" alt="Repülőtéri transzfer">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Extra</span>
+          <span class="price">14 000 Ft</span>
+        </div>
+        <h3>Repülőtéri transzfer</h3>
+        <p>Privát transzfer prémium járművel, rugalmas időponttal.</p>
+        <div class="product-actions">
+          <button class="btn small add-to-booking" data-booking-add="extra" data-name="Repülőtéri transzfer" data-price="14000">Hozzáadás a foglaláshoz</button>
+          <a class="link" href="contact.html">Foglalás</a>
+        </div>
+      </div>
+    </article>
+    <article class="room product-card" data-category="addon">
+      <img src="https://images.unsplash.com/photo-1508766206392-8bd5cf550d1c" alt="Késői kijelentkezés">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Extra</span>
+          <span class="price">5 000 Ft</span>
+        </div>
+        <h3>Késői kijelentkezés</h3>
+        <p>A szoba 15:00-ig használható a távozás napján.</p>
+        <div class="product-actions">
+          <button class="btn small add-to-booking" data-booking-add="extra" data-name="Késői kijelentkezés" data-price="5000">Hozzáadás a foglaláshoz</button>
+          <a class="link" href="contact.html">Foglalás</a>
+        </div>
+      </div>
+    </article>
+    <article class="room product-card" data-category="addon">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Városi bicikli bérlés">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Extra</span>
+          <span class="price">3 500 Ft</span>
+        </div>
+        <h3>Városi bicikli bérlés</h3>
+        <p>Napi bérlés sisakkal és térképpel.</p>
+        <div class="product-actions">
+          <button class="btn small add-to-booking" data-booking-add="extra" data-name="Városi bicikli bérlés" data-price="3500">Hozzáadás a foglaláshoz</button>
+          <a class="link" href="contact.html">Foglalás</a>
+        </div>
+      </div>
+    </article>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Aranyliget Hotel · Prémium Élmény</p>
+  <p>(c) 2026 Aranyliget Hotel Prémium Élmény</p>
   <div class="socials">
     <a href="#">Facebook</a>
     <a href="#">Instagram</a>
@@ -42,8 +233,8 @@
 <div class="modal" id="bookingModal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
-    <h2>Foglalás Sikeres!</h2>
-    <p>Köszönjük, hogy a Aranyliget Hotelt választotta!</p>
+    <h2>Sikeres foglalás!</h2>
+    <p>Köszönjük, hogy az Aranyliget Hotelt választottad.</p>
   </div>
 </div>
 

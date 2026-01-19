@@ -3,45 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kapcsolat - Aranyliget Hotel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Foglalás - Aranyliget Hotel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
-  <h2>Aranyliget</h2>
+  <div class="brand">
+    <img class="nav-logo" src="image.png" alt="Aranyliget Hotel">
+    <span class="brand-name">Aranyliget Hotel</span>
+  </div>
   <ul>
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Kezdőlap</a></li>
     <li><a href="rooms.html">Szobák</a></li>
     <li><a href="gallery.html">Galéria</a></li>
-    <li><a href="contact.html">Kapcsolat</a></li>
+    <li><a href="contact.html">Foglalás</a></li>
   </ul>
   <div class="toggle" onclick="toggleMode()">🌙</div>
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="hamburger" onclick="toggleMenu()">Menü</div>
 </nav>
 
-<section id="contact">
-  <h2 class="title">Kapcsolat</h2>
-  <form id="bookingForm" onsubmit="handleBooking(event)">
-    <label for="name">Név</label>
-    <input type="text" id="name" placeholder="Név" required>
-    
-    <label for="email">Email</label>
-    <input type="email" id="email" placeholder="Email" required>
-    
-    <label for="checkin">Bejelentkezés</label>
-    <input type="date" id="checkin" required>
-    
-    <label for="checkout">Kijelentkezés</label>
-    <input type="date" id="checkout" required>
-    
-    <button type="submit">Foglalás elküldése</button>
-  </form>
+<section class="checkout">
+  <div class="checkout-form">
+    <p class="eyebrow">Foglalás</p>
+    <h1 class="title title-left">Foglalás véglegesítése</h1>
+    <p class="lead">Válaszd ki a dátumokat, a szobát és az extrákat, majd erősítsd meg a foglalást.</p>
+    <form id="bookingForm" onsubmit="handleBooking(event)">
+      <div class="form-section">
+        <h3 class="form-section-title">Személyes adatok</h3>
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Teljes név</label>
+            <input type="text" id="name" placeholder="Név" required>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="you@email.com" required>
+          </div>
+          <div class="field">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" placeholder="+36 30 123 4567" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3 class="form-section-title">Tartózkodás</h3>
+        <div class="form-grid">
+          <div class="field">
+            <label for="guests">Vendégek száma</label>
+            <input type="number" id="guests" min="1" max="6" value="2" required>
+          </div>
+          <div class="field">
+            <label for="checkin">Érkezés</label>
+            <input type="date" id="checkin" required>
+          </div>
+          <div class="field">
+            <label for="checkout">Távozás</label>
+            <input type="date" id="checkout" required>
+          </div>
+          <div class="field full">
+            <label>Szobatípus</label>
+            <div class="room-picker" id="roomPicker">
+              <label class="room-option">
+                <input type="radio" name="room" value="Deluxe szoba" data-price="49000" data-capacity="2" required>
+                <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Deluxe szoba">
+                <div>
+                  <strong>Deluxe szoba</strong>
+                  <span>49 000 Ft / éj · 2 fő</span>
+                </div>
+              </label>
+              <label class="room-option">
+                <input type="radio" name="room" value="Prémium lakosztály" data-price="79000" data-capacity="4" required>
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035" alt="Prémium lakosztály">
+                <div>
+                  <strong>Prémium lakosztály</strong>
+                  <span>79 000 Ft / éj · 4 fő</span>
+                </div>
+              </label>
+              <label class="room-option">
+                <input type="radio" name="room" value="Panorámás szoba" data-price="65000" data-capacity="3" required>
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39" alt="Panorámás szoba">
+                <div>
+                  <strong>Panorámás szoba</strong>
+                  <span>65 000 Ft / éj · 3 fő</span>
+                </div>
+              </label>
+              <label class="room-option">
+                <input type="radio" name="room" value="Kertre néző szoba" data-price="45000" data-capacity="2" required>
+                <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353" alt="Kertre néző szoba">
+                <div>
+                  <strong>Kertre néző szoba</strong>
+                  <span>45 000 Ft / éj · 2 fő</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3 class="form-section-title">Extrák</h3>
+        <div class="checklist">
+          <label><input class="extra" type="checkbox" data-label="Reggeli az ágyban" data-price="6500"> Reggeli az ágyban</label>
+          <label><input class="extra" type="checkbox" data-label="Spa belépő" data-price="9500"> Spa belépő</label>
+          <label><input class="extra" type="checkbox" data-label="Késői kijelentkezés" data-price="5000"> Késői kijelentkezés</label>
+          <label><input class="extra" type="checkbox" data-label="Séf kóstoló" data-price="24000"> Séf kóstoló</label>
+          <label><input class="extra" type="checkbox" data-label="Repülőtéri transzfer" data-price="14000"> Repülőtéri transzfer</label>
+          <label><input class="extra" type="checkbox" data-label="Városi bicikli bérlés" data-price="3500"> Városi bicikli bérlés</label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3 class="form-section-title">Fizetés</h3>
+        <div class="checklist">
+          <label><input type="radio" name="payment" required> Kártyás fizetés</label>
+          <label><input type="radio" name="payment" required> Banki átutalás</label>
+          <label><input type="radio" name="payment" required> Fizetés a helyszínen</label>
+        </div>
+      </div>
+
+      <label class="consent">
+        <input type="checkbox" required>
+        Elfogadom a foglalási feltételeket és a lemondási szabályzatot.
+      </label>
+
+      <button type="submit" class="btn">Foglalás véglegesítése</button>
+    </form>
+  </div>
+
+  <aside class="summary-card">
+    <h3>Rendelés összesítő</h3>
+    <div class="summary-row" id="summaryRoom">
+      <span id="summaryRoomName">Válassz szobát</span>
+      <span id="summaryNights">0 éj</span>
+    </div>
+    <div id="summaryItems"></div>
+    <div class="summary-row" id="summaryCityTax">
+      <span>Városi adó</span>
+      <span id="cityTaxAmount">0 Ft</span>
+    </div>
+    <div class="summary-total">
+      <span>Összesen</span>
+      <strong id="orderTotal">0 Ft</strong>
+    </div>
+    <p class="summary-note" id="summaryNote">Válassz dátumot az összeghez.</p>
+    <p class="summary-note" id="capacityNote"></p>
+  </aside>
 </section>
 
 <footer>
-  <p>© 2026 Aranyliget Hotel · Prémium Élmény</p>
+  <p>(c) 2026 Aranyliget Hotel Prémium Élmény</p>
   <div class="socials">
     <a href="#">Facebook</a>
     <a href="#">Instagram</a>
@@ -52,8 +165,8 @@
 <div class="modal" id="bookingModal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
-    <h2>Foglalás Sikeres!</h2>
-    <p>Köszönjük, hogy a Aranyliget Hotelt választotta!</p>
+    <h2>Sikeres foglalás!</h2>
+    <p>Köszönjük, hogy az Aranyliget Hotelt választottad.</p>
   </div>
 </div>
 

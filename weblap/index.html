@@ -4,56 +4,138 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aranyliget Hotel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <nav>
-  <h2>Aranyliget</h2>
+  <div class="brand">
+    <img class="nav-logo" src="image.png" alt="Aranyliget Hotel">
+    <span class="brand-name">Aranyliget Hotel</span>
+  </div>
   <ul>
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Kezdőlap</a></li>
     <li><a href="rooms.html">Szobák</a></li>
     <li><a href="gallery.html">Galéria</a></li>
-    <li><a href="contact.html">Kapcsolat</a></li>
+    <li><a href="contact.html">Foglalás</a></li>
   </ul>
   <div class="toggle" onclick="toggleMode()">🌙</div>
+  <div class="hamburger" onclick="toggleMenu()">Menü</div>
 </nav>
 
-<header>
-  <img src="image1.png" class="logo" alt="Aranyliget Logo">
-  <h1>ARANYLIGET HOTEL</h1>
-  <p>Természet, luxus és nyugalom tökéletes harmóniában</p>
-  <a href="rooms.html" class="btn">Szobák megtekintése</a>
-</header>
+<section class="hero-shop">
+  <div class="hero-content">
+    <p class="eyebrow">Aranyliget Hotel</p>
+    <h1>Kényelmes városi hotel, ahol a nyugalom az alap.</h1>
+    <p>Modern szobák, figyelmes kiszolgálás és átgondolt extrák egy elegáns, barátságos környezetben.</p>
+    <div class="hero-actions">
+      <a class="btn" href="rooms.html">Szobák megtekintése</a>
+      <a class="btn btn-ghost" href="contact.html">Foglalás</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <strong>4.9</strong>
+        <span>Vendégértékelés</span>
+      </div>
+      <div>
+        <strong>24/7</strong>
+        <span>Recepció</span>
+      </div>
+      <div>
+        <strong>4</strong>
+        <span>Szobatípus</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <p class="tag">Kiemelt ajánlat</p>
+    <h3>Hétvégi pihenés</h3>
+    <p>Két éj, reggeli, késői kijelentkezés.</p>
+    <div class="price-row">
+      <span class="price">69 000 Ft-tól</span>
+      <a class="link" href="contact.html">Foglalás</a>
+    </div>
+  </div>
+</section>
 
-<section id="rooms">
-  <h2 class="title">Szobáink</h2>
-  <div class="rooms">
-    <div class="room"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Deluxe Szoba"><div><h3>Deluxe Szoba</h3></div></div>
-    <div class="room"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035" alt="Prémium Lakosztály"><div><h3>Prémium Lakosztály</h3></div></div>
-    <div class="room"><img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39" alt="Panorámás Szoba"><div><h3>Panorámás Szoba</h3></div></div>
+<section>
+  <h2 class="title">Kiemelt szobák</h2>
+  <div class="rooms product-grid">
+    <article class="room product-card">
+      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Deluxe szoba">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Szoba</span>
+          <span class="price">49 000 Ft / éj</span>
+        </div>
+        <h3>Deluxe szoba</h3>
+        <p>Városi kilátás, prémium ágynemű és csendes pihenés.</p>
+        <div class="product-actions">
+          <a class="btn small" href="contact.html">Foglalás</a>
+          <a class="link" href="rooms.html">Részletek</a>
+        </div>
+      </div>
+    </article>
+    <article class="room product-card">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035" alt="Prémium lakosztály">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Lakosztály</span>
+          <span class="price">79 000 Ft / éj</span>
+        </div>
+        <h3>Prémium lakosztály</h3>
+        <p>Tágas tér, nappali rész és elegáns belső kialakítás.</p>
+        <div class="product-actions">
+          <a class="btn small" href="contact.html">Foglalás</a>
+          <a class="link" href="rooms.html">Részletek</a>
+        </div>
+      </div>
+    </article>
+    <article class="room product-card">
+      <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39" alt="Panorámás szoba">
+      <div class="product-body">
+        <div class="product-top">
+          <span class="tag">Szoba</span>
+          <span class="price">65 000 Ft / éj</span>
+        </div>
+        <h3>Panorámás szoba</h3>
+        <p>Világos belső tér, nagy ablakok és lenyűgöző kilátás.</p>
+        <div class="product-actions">
+          <a class="btn small" href="contact.html">Foglalás</a>
+          <a class="link" href="rooms.html">Részletek</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">Miért az Aranyliget Hotel</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>Rugalmas foglalás</h3>
+      <p>Átlátható feltételek és gyors visszaigazolás.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Kényelmes szolgáltatások</h3>
+      <p>Reggeli, wellness és személyre szabott extrák.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Figyelmes személyzet</h3>
+      <p>Barátságos csapat, amely a vendégélményre fókuszál.</p>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Aranyliget Hotel · Prémium Élmény</p>
+  <p>(c) 2026 Aranyliget Hotel Prémium Élmény</p>
   <div class="socials">
-    <i class="fa fa-facebook-square"></i>
-    <i class="fa fa-instagram"></i>
-    <i class="fa fa-twitter"></i>
-    <i class="fa fa-github"></i>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
   </div>
 </footer>
-
-<div class="modal" id="bookingModal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2>Foglalás Sikeres!</h2>
-    <p>Köszönjük, hogy a Aranyliget Hotelt választotta!</p>
-  </div>
-</div>
 
 <script src="script.js"></script>
 </body>
