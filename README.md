@@ -1,31 +1,93 @@
-# 1. Virtualizáció: több VM egy fizikai gépen
-Hypervisor: Type 1 / Type 2
-Docker: konténer alapú futtatás
-# Felhő:
-IaaS – infrastruktúra
-PaaS – platform
-SaaS – alkalmazás
-# Relációs adatbázis: táblák, rekordok
-SQL alapok:
-SELECT
-INSERT
-UPDATE
-DELETE
-Mentés és visszaállítás fontossága
-# Erős jelszavak
+# 1. A szálloda bemutatása
+
+Szálloda neve
+
+Elhelyezkedés
+
+Szobák száma, típusa
+
+Szolgáltatások rövid leírása
+
+# 2. Informatikai infrastruktúra áttekintése
+
+Informatikai rendszer célja
+
+Felhasználók köre (recepció, admin, vendég)
+
+Alapvető követelmények
+
+# 3. Hardveres környezet
+
+Szerver(ek)
+
+Munkaállomások (recepció, iroda)
+
+Hálózati eszközök (router, switch, access point)
+
+Nyomtatók, egyéb perifériák
+
+# 4. Szoftveres környezet
+
+Operációs rendszerek
+
+Szállodai ügyviteli szoftver
+
+Irodai programok
+
 Vírusvédelem
+
+# 5. Hálózati felépítés
+
+Helyi hálózat (LAN)
+
+Vendég WiFi
+
+IP-címzés alapelvei
+
+Internetkapcsolat
+
+# 6. Felhasználók és jogosultságok
+
+Felhasználói fiókok
+
+Jogosultsági szintek
+
+Jelszókezelés
+
+# 7. Adatkezelés és adatbiztonság
+
+Kezelt adatok köre
+
+Mentési megoldások
+
+Adatvédelem (GDPR alapok)
+
+# 8. Üzemeltetés és karbantartás
+
+Rendszeres karbantartási feladatok
+
+Frissítések
+
+Hibakezelés
+
+# 9. Biztonsági megoldások
+
 Tűzfal
-Mentési típusok:
-Teljes
-Differenciális
-Inkrementális
-GDPR alapelvek
-# Rendszerdokumentáció
-Hibajegykezelés
-SLA, ITIL alapfogalmak
-# 2. Hálózat
-IP-cím helyes-e
-Alhálózati maszk
-Átjáró (gateway)
-DNS beállítás
-Ping teszt
+
+Vírusvédelem
+
+Fizikai védelem
+
+# 10. Dokumentáció
+
+Rendszerdokumentáció
+
+Felhasználói leírás
+
+Hibajegy-kezelés
+
+# 11. Összegzés
+
+Rendszer előnyei
+
+Továbbfejlesztési lehetőségek
